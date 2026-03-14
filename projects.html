@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Shreyansh Rao</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            background: #0f0c29;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .main-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            z-index: -1;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        h1 span {
+            color: #00d2ff;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            width: 100%;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: #00d2ff;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .project-tag {
+            color: #00d2ff;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        p {
+            color: #ccc;
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+            flex-grow: 1;
+        }
+
+        .project-link {
+            text-decoration: none;
+            color: #00d2ff;
+            font-weight: bold;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            transition: 0.3s;
+        }
+
+        .project-link:hover {
+            color: #fff;
+        }
+
+        .project-link span {
+            margin-left: 8px;
+            transition: 0.3s;
+        }
+
+        .project-link:hover span {
+            transform: translateX(5px);
+        }
+
+        .back-btn-container {
+            width: 100%;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .back-btn {
+            color: #aaa;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            color: #00d2ff;
+        }
+
+        @media (max-width: 600px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-bg"></div>
+
+    <div class="content">
+        <header>
+            <h1>My <span>Projects</span></h1>
+            <p style="color: #aaa;">Engineering solutions and creative web builds</p>
+        </header>
+
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <div>
+                    <span class="project-tag">Electronics / Web</span>
+                    <h2>Electrofy</h2>
+                    <p>A comprehensive web platform showcasing modern electronic gadgets, specs, and hardware reviews.</p>
+                </div>
+                <a href="http://127.0.0.1:5500/Project/index.html" class="project-link">View Project <span>&rarr;</span></a>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <span class="project-tag">Web Design</span>
+                    <h2>Rajinikanth Fanpage</h2>
+                    <p>A high-energy, visually striking tribute page dedicated to Superstar Rajinikanth.</p>
+                </div>
+                <a href="http://127.0.0.1:5500/WEB/index.html" class="project-link">View Project <span>&rarr;</span></a>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <span class="project-tag">Web Design</span>
+                    <h2>KLH Web page</h2>
+                    <p>A web page which contains the information about the courses available at KLH.</p>
+                </div>
+                <a href="http://127.0.0.1:5500/BRS/index.html" class="project-link">View Project <span>&rarr;</span></a>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <span class="project-tag">Web Design</span>
+                    <h2>Bootstrap Build</h2>
+                    <p>A responsive web page developed leveraging the Bootstrap framework.</p>
+                </div>
+                <a href="http://127.0.0.1:5500/Bootstrap/Bootstrap.html" class="project-link">View Project <span>&rarr;</span></a>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <span class="project-tag">Web Design</span>
+                    <h2>Animation Showcase</h2>
+                    <p>An interactive web page highlighting advanced CSS animations.</p>
+                </div>
+                <a href="http://127.0.0.1:5500/Animation/animation.html" class="project-link">View Project <span>&rarr;</span></a>
+            </div>
+            
+            <div class="project-card">
+                <div>
+                    <span class="project-tag">Web Design</span>
+                    <h2>Restaurant Menu</h2>
+                    <p>A digital menu experience showcasing available dishes and pricing.</p>
+                </div>
+                <a href="http://127.0.0.1:5500/FWD/index.html" class="project-link">View Project <span>&rarr;</span></a>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <span class="project-tag">Web Design</span>
+                    <h2>HyperLink Structure</h2>
+                    <p>A project focusing on complex internal and external navigation.</p>
+                </div>
+                <a href="http://127.0.0.1:5500/HTML/index.html" class="project-link">View Project <span>&rarr;</span></a>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <span class="project-tag">Web Design</span>
+                    <h2>Student Admission</h2>
+                    <p>A functional and styled web form designed for student enrollment.</p>
+                </div>
+                <a href="http://127.0.0.1:5500/KCR/index.html" class="project-link">View Project <span>&rarr;</span></a>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <span class="project-tag">Web Design</span>
+                    <h2>Media Tags</h2>
+                    <p>A deep dive into embedding and controlling multimedia elements.</p>
+                </div>
+                <a href="http://127.0.0.1:5500/MEDIA/index.html" class="project-link">View Project <span>&rarr;</span></a>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <span class="project-tag">JavaScript</span>
+                    <h2>Adding Content dynamically</h2>
+                    <p>Adding content dynamically to the focusing DOM manipulation.</p>
+                </div>
+                <a href="http://127.0.0.1:5500/JavaScript/Addcontentdynamicallytothedocusingdommanipulation.html" class="project-link">View Project <span>&rarr;</span></a>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <span class="project-tag">JavaScript</span>
+                    <h2>Age predictor</h2>
+                    <p>A small game to guess age.</p>
+                </div>
+                <a href="http://127.0.0.1:5500/JavaScript/AgePredictor.html" class="project-link">View Project <span>&rarr;</span></a>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <span class="project-tag">JavaScript</span>
+                    <h2>Background Color Chnage</h2>
+                    <p>A webpage which can change the background-color with one click.</p>
+                </div>
+                <a href="http://127.0.0.1:5500/JavaScript/BackgroundColorChnage.html" class="project-link">View Project <span>&rarr;</span></a>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <span class="project-tag">JavaScript</span>
+                    <h2>Calc Using Js</h2>
+                    <p>A simple Calculator using Js.</p>
+                </div>
+                <a href="http://127.0.0.1:5500/JavaScript/Calculator.html" class="project-link">View Project <span>&rarr;</span></a>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <span class="project-tag">JavaScript</span>
+                    <h2>Login page</h2>
+                    <p>A Login page using Js.</p>
+                </div>
+                <a href="http://127.0.0.1:5500/JavaScript/login.html" class="project-link">View Project <span>&rarr;</span></a>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <span class="project-tag">JavaScript</span>
+                    <h2>Task Manager</h2>
+                    <p>A simple webpage using Js for task manager.</p>
+                </div>
+                <a href="http://127.0.0.1:5500/JavaScript/StudentTaskBar.html" class="project-link">View Project <span>&rarr;</span></a>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <span class="project-tag">Web Page</span>
+                    <h2>Web page using media tags</h2>
+                    <p>A web page which contains all the media tags.</p>
+                </div>
+                <a href="http://127.0.0.1:5500/Sadie/index.html" class="project-link">View Project <span>&rarr;</span></a>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <span class="project-tag">Web Design</span>
+                    <h2>Web page for conversions</h2>
+                    <p>A webpage which contains basic convertions of Temperature.</p>
+                </div>
+                <a href="http://127.0.0.1:5500/TRS/index.html" class="project-link">View Project <span>&rarr;</span></a>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <span class="project-tag">Web Design</span>
+                    <h2>Time table</h2>
+                    <p>A webpage which contains Time table made of table tags.</p>
+                </div>
+                <a href="http://127.0.0.1:5500/Basics/timetable.html" class="project-link">View Project <span>&rarr;</span></a>
+            </div>
+
+           
+        </div>
+
+        <div class="back-btn-container">
+            <a href="index.html" class="back-btn">← Back to Portfolio</a>
+        </div>
+    </div>
+
+</body>
+</html>

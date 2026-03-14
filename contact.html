@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Shreyansh Rao</title>
+    <style>
+        /* --- GLOBAL SETUP --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            background: #0f0c29;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* --- SHARED BACKGROUND --- */
+        .main-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            z-index: -1;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        h1 span { color: #00d2ff; }
+
+        /* --- LAYOUT GRID --- */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        /* --- GLASS CARDS --- */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        /* --- INFO SECTION --- */
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            gap: 15px;
+        }
+
+        .info-icon {
+            font-size: 1.5rem;
+            background: rgba(0, 210, 255, 0.1);
+            padding: 10px;
+            border-radius: 12px;
+            color: #00d2ff;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        .info-text h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            color: #00d2ff;
+            letter-spacing: 1px;
+        }
+
+        .info-text p, .info-text a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            word-break: break-all;
+        }
+
+        .info-text a:hover {
+            color: #00d2ff;
+        }
+
+        /* --- FORM STYLING --- */
+        #contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        label {
+            font-size: 0.85rem;
+            color: #aaa;
+        }
+
+        input, textarea {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 12px;
+            color: white;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input:focus, textarea:focus { border-color: #00d2ff; }
+
+        .submit-btn {
+            background: #00d2ff;
+            color: #0f0c29;
+            border: none;
+            padding: 14px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover { background: #fff; transform: translateY(-2px); }
+
+        /* --- SUCCESS MESSAGE --- */
+        #success-message {
+            display: none;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 40px;
+            color: #aaa;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .contact-wrapper { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-bg"></div>
+
+    <div class="content">
+        <header>
+            <h1>Contact <span>Me</span></h1>
+            <p style="color: #aaa;">Let's connect and build something great</p>
+        </header>
+
+        <div class="contact-wrapper">
+            
+            <div class="glass-card">
+                <div class="info-item">
+                    <div class="info-icon">📧</div>
+                    <div class="info-text">
+                        <h3>Email</h3>
+                        <a href="mailto:surineni.shreyansh@klh.edi.com">shreyanshrao@example.com</a>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">📞</div>
+                    <div class="info-text">
+                        <h3>Phone</h3>
+                        <p>+91 9059462041</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">🔗</div>
+                    <div class="info-text">
+                        <h3>LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/shreyansh-surineni-3886a3391/" target="_blank">linkedin.com/in/shreyansh</a>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">💻</div>
+                    <div class="info-text">
+                        <h3>GitHub</h3>
+                        <a href="https://github.com/surinenishreyansh-ux" target="_blank">github.com/shreyansh</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card">
+                <form id="contact-form">
+                    <div class="input-group">
+                        <label>Name</label>
+                        <input type="text" id="userName" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="email" id="userEmail" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Message</label>
+                        <textarea id="userMsg" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+
+                <div id="success-message">
+                    <div style="font-size: 3rem;">✅</div>
+                    <h2>Thanks for your message!</h2>
+                    <p>I'll get back to you soon.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+    </div>
+
+    <script>
+        const contactForm = document.getElementById('contact-form');
+        const successMessage = document.getElementById('success-message');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            contactForm.style.display = 'none';
+            successMessage.style.display = 'block';
+        });
+    </script>
+</body>
+</html>

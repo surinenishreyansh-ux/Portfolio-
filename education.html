@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education | Shreyansh Rao</title>
+    <style>
+        /* --- GLOBAL SETUP --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            background: #0f0c29;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* --- SHARED BACKGROUND --- */
+        .main-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            z-index: -1;
+        }
+
+        /* --- CONTENT LAYOUT --- */
+        .content {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        h1 span {
+            color: #00d2ff;
+        }
+
+        /* --- GLASS CARD (Same as Skills/Portfolio) --- */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 35px;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 210, 255, 0.5);
+        }
+
+        /* --- EDUCATION ROW (Simple & Clean) --- */
+        .edu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 10px;
+        }
+
+        .edu-title h2 {
+            font-size: 1.4rem;
+            color: #fff;
+        }
+
+        .edu-title p {
+            color: #00d2ff;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .year-tag {
+            background: rgba(0, 210, 255, 0.15);
+            color: #00d2ff;
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            border: 1px solid rgba(0, 210, 255, 0.3);
+            white-space: nowrap;
+        }
+
+        .details {
+            font-size: 0.95rem;
+            color: #ccc;
+            margin-top: 10px;
+        }
+
+        .back-btn {
+            display: block;
+            text-align: center;
+            margin-top: 40px;
+            color: #aaa;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            color: #00d2ff;
+        }
+
+        /* Responsive Tweak */
+        @media (max-width: 500px) {
+            .edu-header {
+                flex-direction: column;
+            }
+            .year-tag {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-bg"></div>
+
+    <div class="content">
+        <header>
+            <h1>Academic <span>Journey</span></h1>
+            <p style="color: #aaa;">My educational background and qualifications</p>
+        </header>
+
+        <div class="glass-card">
+            <div class="edu-header">
+                <div class="edu-title">
+                    <h2>B.Tech in ECE</h2>
+                    <p>Kl University</p>
+                </div>
+                <span class="year-tag">2024 - PRESENT</span>
+            </div>
+            <p class="details">Roll No: 2510040033. Specializing in Electronics and Communication Engineering with an interest in VLSI and Embedded Systems.</p>
+        </div>
+
+        <div class="glass-card">
+            <div class="edu-header">
+                <div class="edu-title">
+                    <h2>Intermediate (MPC)</h2>
+                    <p>Narayana Junior College</p>
+                </div>
+                <span class="year-tag">2022 - 2024</span>
+            </div>
+            <p class="details">Focused on Mathematics, Physics, and Chemistry. Developed strong analytical and problem-solving skills.</p>
+        </div>
+
+        <div class="glass-card">
+            <div class="edu-header">
+                <div class="edu-title">
+                    <h2>Secondary School (SSC)</h2>
+                    <p>Narayana High School</p>
+                </div>
+                <span class="year-tag">COMPLETED 2022</span>
+            </div>
+            <p class="details">Completed 10th grade with a 9.3 cgpa along with strong foundation.</p>
+        </div>
+
+        <a href="index.html" class="back-btn">← Back to Portfolio</a>
+    </div>
+
+</body>
+</html>
