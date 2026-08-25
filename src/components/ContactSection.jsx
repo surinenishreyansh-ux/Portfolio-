@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import confetti from 'canvas-confetti';
-import { Mail, Github, Linkedin, Send, Copy, Check, Sparkles } from 'lucide-react';
+import { Mail, Github, Linkedin, Send, Copy, Check, Sparkles, ArrowUpRight } from 'lucide-react';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
   const [copied, setCopied] = useState(false);
 
-  const email = "contact@shreyasnh.dev";
-  const github = "https://github.com/shreyasnh";
-  const linkedin = "https://linkedin.com/in/shreyasnh";
+  const email = "surineni.shreyansh@klh.edu.in";
+  const github = "https://github.com/surinenishreyansh-ux";
+  const linkedin = "https://www.linkedin.com/in/shreyansh-sureneni-3886a3391/";
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(email);
@@ -59,14 +59,13 @@ export default function ContactSection() {
               <p className="text-xs font-mono text-[#00ff66] tracking-widest uppercase mb-3">// START A CONVERSATION</p>
               <h2 className="text-5xl sm:text-6xl md:text-7xl font-extrabold font-heading tracking-tight text-white leading-none mb-6">
                 LET'S <br />
-                BUILD <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ff66] to-[#00f0ff]">
-                  SOMETHING.
+                  BUILD SOMETHING.
                 </span>
               </h2>
 
               <p className="text-base sm:text-lg text-slate-300 max-w-md leading-relaxed font-light mb-10">
-                Have an idea, project or opportunity? Let's turn it into something meaningful.
+                Have an idea, project, or collaboration? Let's turn it into something real and impactful.
               </p>
             </div>
 
@@ -76,7 +75,7 @@ export default function ContactSection() {
                 <a
                   href={`mailto:${email}`}
                   data-cursor="EMAIL"
-                  className="px-6 py-3.5 bg-[#00ff66] text-black font-mono font-bold text-xs tracking-wider uppercase rounded-full flex items-center gap-2 hover:bg-white transition-all shadow-[0_0_25px_rgba(0,255,102,0.3)]"
+                  className="px-6 py-3.5 bg-[#00ff66] text-black font-mono font-bold text-xs tracking-wider uppercase rounded-full flex items-center gap-2 hover:bg-white transition-all shadow-[0_0_25px_rgba(0,255,102,0.3)] hover:scale-105"
                 >
                   <Mail className="w-4 h-4" />
                   <span>[ EMAIL ME ]</span>
@@ -87,7 +86,7 @@ export default function ContactSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   data-cursor="GITHUB"
-                  className="px-6 py-3.5 glass-panel text-white font-mono font-bold text-xs tracking-wider uppercase rounded-full flex items-center gap-2 hover:border-[#00ff66] hover:text-[#00ff66] transition-all"
+                  className="px-6 py-3.5 glass-panel text-white font-mono font-bold text-xs tracking-wider uppercase rounded-full flex items-center gap-2 hover:border-[#00ff66] hover:text-[#00ff66] transition-all hover:scale-105"
                 >
                   <Github className="w-4 h-4" />
                   <span>[ GITHUB ]</span>
@@ -98,7 +97,7 @@ export default function ContactSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   data-cursor="LINKEDIN"
-                  className="px-6 py-3.5 glass-panel text-white font-mono font-bold text-xs tracking-wider uppercase rounded-full flex items-center gap-2 hover:border-[#00f0ff] hover:text-[#00f0ff] transition-all"
+                  className="px-6 py-3.5 glass-panel text-white font-mono font-bold text-xs tracking-wider uppercase rounded-full flex items-center gap-2 hover:border-[#00f0ff] hover:text-[#00f0ff] transition-all hover:scale-105"
                 >
                   <Linkedin className="w-4 h-4" />
                   <span>[ LINKEDIN ]</span>
@@ -113,10 +112,10 @@ export default function ContactSection() {
                 </div>
                 <button
                   onClick={handleCopyEmail}
-                  className="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-xs font-mono text-slate-300 flex items-center gap-1.5 transition-colors"
+                  className="px-3.5 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-xs font-mono text-slate-300 flex items-center gap-1.5 transition-colors cursor-pointer"
                 >
                   {copied ? <Check className="w-3.5 h-3.5 text-[#00ff66]" /> : <Copy className="w-3.5 h-3.5" />}
-                  <span>{copied ? 'COPIED' : 'COPY'}</span>
+                  <span className={copied ? 'text-[#00ff66] font-bold' : ''}>{copied ? 'COPIED' : 'COPY'}</span>
                 </button>
               </div>
             </div>
@@ -146,7 +145,7 @@ export default function ContactSection() {
                     MESSAGE SENT!
                   </h3>
                   <p className="text-sm font-mono text-slate-300 max-w-sm mx-auto leading-relaxed">
-                    Thank you for reaching out, {formData.name}. I will get back to you shortly!
+                    Thank you for reaching out, {formData.name}. I will review your note and get back to you shortly!
                   </p>
                   <button
                     onClick={() => {
@@ -159,7 +158,7 @@ export default function ContactSection() {
                   </button>
                 </motion.div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-5">
                   
                   <div>
                     <label className="block text-xs font-mono text-slate-400 uppercase tracking-widest mb-2">
@@ -196,7 +195,7 @@ export default function ContactSection() {
                     <textarea
                       required
                       rows={4}
-                      placeholder="Tell me about your project, idea, or opportunity..."
+                      placeholder="Tell me about your project, idea, or product vision..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-[#00ff66] transition-colors placeholder:text-slate-600 font-sans resize-none"

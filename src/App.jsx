@@ -3,11 +3,12 @@ import CustomCursor from './components/CustomCursor';
 import NoiseBackground from './components/NoiseBackground';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
-import AboutSection from './components/AboutSection';
-import ProjectsSection from './components/ProjectsSection';
-import SkillsSection from './components/SkillsSection';
-import JourneySection from './components/JourneySection';
 import AchievementsMarquee from './components/AchievementsMarquee';
+import EditraFeaturedSection from './components/EditraFeaturedSection';
+import BuilderPipeline from './components/BuilderPipeline';
+import ProjectsSection from './components/ProjectsSection';
+import AboutSection from './components/AboutSection';
+import SkillsSection from './components/SkillsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 
@@ -26,26 +27,30 @@ export default function App() {
       {/* Hero Section */}
       <HeroSection />
 
-      {/* Achievements Marquee Ticker */}
+      {/* High-Signal Ticker */}
       <AchievementsMarquee />
 
-      {/* About Section */}
-      <AboutSection />
+      {/* Prominent Featured Project: EDITRA AI */}
+      <EditraFeaturedSection />
 
-      {/* Selected Projects Showcase */}
+      {/* Builder Methodology Pipeline */}
+      <BuilderPipeline />
+
+      {/* Shipped Live Projects Showcase */}
       <ProjectsSection />
 
-      {/* Technical Skills Matrix */}
+      {/* Founder About Section */}
+      <AboutSection />
+
+      {/* Technical Foundations Matrix */}
       <SkillsSection />
 
-      {/* Milestones & Journey */}
-      <JourneySection />
-
-      {/* Contact Form & Direct Links */}
+      {/* Contact & Direct Outreach */}
       <ContactSection />
 
-      {/* Main Footer */}
+      {/* Footer */}
       <Footer />
     </div>
   );
 }
+

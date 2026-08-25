@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { skillCategories } from '../data/skills';
-import { Code2, Atom, Layers, Terminal, Sparkles, CheckCircle } from 'lucide-react';
+import { Code2, Atom, Layers, Terminal, Sparkles, CheckCircle2 } from 'lucide-react';
 
 export default function SkillsSection() {
   const [activeCategory, setActiveCategory] = useState(skillCategories[0].id);
 
   const getCategoryIcon = (id) => {
     switch (id) {
-      case 'languages': return <Code2 className="w-5 h-5 text-[#00ff66]" />;
       case 'web': return <Atom className="w-5 h-5 text-[#00f0ff]" />;
+      case 'languages': return <Code2 className="w-5 h-5 text-[#00ff66]" />;
       case 'cs': return <Layers className="w-5 h-5 text-purple-400" />;
       case 'tools': return <Terminal className="w-5 h-5 text-yellow-400" />;
       default: return <Sparkles className="w-5 h-5 text-[#00ff66]" />;
@@ -24,7 +24,7 @@ export default function SkillsSection() {
 
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         
-        {/* Editorial Heading */}
+        {/* Section Heading */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end mb-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -33,11 +33,11 @@ export default function SkillsSection() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-7"
           >
-            <p className="text-xs font-mono text-[#00ff66] tracking-widest uppercase mb-3">// TECHNICAL STACK</p>
+            <p className="text-xs font-mono text-[#00ff66] tracking-widest uppercase mb-3">// ENGINEERING CAPABILITIES</p>
             <h2 className="text-5xl sm:text-6xl md:text-7xl font-extrabold font-heading tracking-tight text-white leading-none">
-              WHAT <br />
+              TECHNICAL <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ff66] to-[#00f0ff]">
-                I WORK WITH.
+                FOUNDATIONS.
               </span>
             </h2>
           </motion.div>
@@ -49,19 +49,19 @@ export default function SkillsSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="lg:col-span-5 text-sm font-mono text-slate-400"
           >
-            Categorized technical capabilities spanning language syntax, framework orchestration, core computer science concepts, and modern devops platforms.
+            Categorized technical capabilities spanning frontend architecture, programming languages, core computer science concepts, and modern devops platforms.
           </motion.p>
         </div>
 
         {/* Category Navigation Tabs */}
-        <div className="flex flex-wrap items-center gap-3 mb-12 border-b border-white/10 pb-6">
+        <div className="flex flex-wrap items-center gap-3 mb-10 border-b border-white/10 pb-6">
           {skillCategories.map((cat) => {
             const isActive = activeCategory === cat.id;
             return (
               <button
                 key={cat.id}
                 onClick={() => setActiveCategory(cat.id)}
-                className={`flex items-center gap-2.5 px-5 py-3 rounded-full font-mono text-xs font-bold tracking-wider uppercase transition-all duration-300 ${
+                className={`flex items-center gap-2.5 px-5 py-3 rounded-full font-mono text-xs font-bold tracking-wider uppercase transition-all duration-300 cursor-pointer ${
                   isActive
                     ? 'bg-[#00ff66] text-black shadow-[0_0_25px_rgba(0,255,102,0.3)] scale-105'
                     : 'glass-panel text-slate-400 hover:text-white hover:border-white/20'
@@ -102,15 +102,15 @@ export default function SkillsSection() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: idx * 0.05, duration: 0.3 }}
-                    whileHover={{ scale: 1.03, y: -4 }}
+                    whileHover={{ scale: 1.02, y: -4 }}
                     className="glass-panel p-6 rounded-2xl border border-white/10 hover:border-[#00ff66]/40 transition-all duration-300 group glow-card flex flex-col justify-between"
                   >
                     <div className="flex items-center justify-between mb-4">
                       <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#00ff66] group-hover:scale-110 group-hover:bg-[#00ff66] group-hover:text-black transition-all">
-                        <CheckCircle className="w-5 h-5" />
+                        <CheckCircle2 className="w-5 h-5" />
                       </div>
-                      <span className="text-[10px] font-mono tracking-widest px-2.5 py-1 rounded-full bg-white/5 text-[#00f0ff] border border-white/10 uppercase">
-                        {skill.level}
+                      <span className="text-[10px] font-mono tracking-wider px-2.5 py-1 rounded-full bg-white/5 text-[#00f0ff] border border-white/10">
+                        {skill.domain}
                       </span>
                     </div>
 
@@ -119,7 +119,7 @@ export default function SkillsSection() {
                         {skill.name}
                       </h4>
                       <p className="text-xs font-mono text-slate-400">
-                        Production Ready Proficiency
+                        Production Ready & Actively Used
                       </p>
                     </div>
                   </motion.div>
@@ -129,16 +129,17 @@ export default function SkillsSection() {
           );
         })}
 
-        {/* Global Tech Skill Tag Cloud */}
-        <div className="mt-16 glass-panel p-8 sm:p-10 rounded-3xl border border-white/10">
+        {/* Global Tech Spectrum */}
+        <div className="mt-14 glass-panel p-8 sm:p-10 rounded-3xl border border-white/10">
           <p className="text-xs font-mono text-slate-400 uppercase tracking-widest mb-6">
-            // INTERACTIVE TECH SPECTRUM
+            // FULL TECHNICAL ECOSYSTEM
           </p>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-2.5">
             {[
-              "Java", "Python", "JavaScript", "C", "HTML5", "CSS3", "React", "Vite", 
-              "Tailwind CSS", "REST APIs", "Data Structures", "Algorithms", "OOP", 
-              "Problem Solving", "Git", "GitHub", "VS Code", "Vercel", "Cloudflare", "Framer Motion"
+              "React", "JavaScript (ES6+)", "Python", "Java", "C", "Vite", 
+              "Tailwind CSS", "Framer Motion", "REST APIs", "Data Structures", 
+              "Algorithms", "Git", "GitHub", "VS Code", "Vercel", "Render", 
+              "Netlify", "AI Agents", "State Management", "DOM Architecture"
             ].map((tech) => (
               <span
                 key={tech}
